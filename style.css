@@ -102,13 +102,13 @@ nav {
 nav li {
   padding:10px 10px;
   list-style-type:none;
-  font-size:2em;
+  font-size:1.5em;
   font-weight:bold;
 }
 
 nav a {
   text-decoration:none;
-  color:#bf212e;
+  color:#AF1B27;
 }
 nav a:hover {
   text-shadow: 2px 2px 5px #3217ff;
