@@ -1,0 +1,303 @@
+img{
+  max-width:100%; /*keep this in case you add pictures*/
+}
+
+body {
+  font-family: Verdana;
+  background-color:#4f8ca6;
+  margin:0;
+
+}
+
+/*header, main,aside, article, section, .fig2, form,footer{
+   border-radius:5px;
+}*/
+
+header {
+  grid-area:header;
+  background: rgba(0,0,0,.2);
+  text-align:center;
+}
+
+.headerpic {
+  grid-area:headerpic;
+  padding:5px;
+  height:10vmax;
+}
+
+.headertext {
+  grid-area:headertext;
+  text-align:center;
+}
+    
+.headerwrapper {
+  display:grid;
+  justify-items: center;
+  align-items:center;
+  grid-template-columns:25% auto;
+  grid-template-areas:
+  "headerpic headertext"
+}
+
+header h1 {
+  font-size:3vw;
+  color:#bf212e;
+  font-family:Impact;
+  margin: 0;
+}
+
+header h3 {
+  font-size:1.75vw;
+  color:#bf212e;
+  margin:0;
+}
+nav {
+  grid-area:nav;
+  background:#4f8ca6;
+   position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    z-index:999;
+    margin:0;
+    border-bottom:2px solid Black;
+}
+.first {
+    grid-area:first;
+    margin-left:2%;
+}
+
+.second {
+    grid-area:second;
+}
+
+.third {
+    grid-area:third;
+}
+
+.fourth {
+    grid-area:fourth;
+}
+
+.fifth {
+    grid-area:fifth;
+}
+.sixth{
+    grid-area:sixth;
+}
+.seventh{
+    grid area:seventh;
+}
+
+#navwrapper {
+    display:grid;
+    grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth"
+    "sixth"
+    "seventh";
+    }
+nav li {
+  padding:10px 10px;
+  list-style-type:none;
+  font-size:1.5em;
+  font-weight:bold;
+}
+
+nav a {
+  text-decoration:none;
+  color:#bf212e;
+}
+nav a:hover {
+  text-shadow: 2px 2px 5px #3217ff;
+}
+
+main {
+  grid-area:main;
+  background: rgba(0,0,0,.2);
+  color:#bf212e;
+  padding:5px;
+}
+main a{
+  color:#bf212e;
+}
+main h4{
+  font-size:30px;
+  text-align:center;
+}
+main p{
+  text-align:center;
+}
+
+footer {
+  grid-area:footer;
+  background: rgba(0,0,0,.2);
+  padding:5px;
+  text-align:center;
+}
+
+footer p {
+     font-size:1em;
+     color:#bf212e;
+     margin:0;
+}
+/*--------------------Index.Html------------------------*/
+.homeA{
+  grid-area:homeA;
+}
+.figB {
+  grid-area:figB;
+}
+.figC {
+  grid-area:figC;
+}
+.figD {
+  grid-area:figD;
+}
+.homeB{
+  grid-area:homeB;
+}
+.homeC{
+  grid-area:homeC;
+}
+.homeD{
+  grid-area:homeD;
+}
+.Dog1{
+  Max-height:300px;
+  max-width:300px;
+}
+.Dog2{
+   Max-height:400px;
+  max-width:400px;
+   margin-top:20%;
+}
+.Dog3{
+   Max-height:200px;
+  max-width:200px;
+}
+/*---------------------------Mobile Layout----------------------------*/
+.container2 { /*for index.html*/
+  display: grid;
+  margin:0;
+  grid-template-columns:1fr;
+  grid-gap:.5em;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+.nestedgrid {
+display:grid;
+grid-template-columns:100%;
+grid-template-areas:
+"homeA"
+"figB"
+"homeB"
+"figC"
+"homeC"
+"figD"
+"homeD";
+}
+/*This stuff is for the hamburger menu*/
+.toggleNav {
+    display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+    text-align:center;
+    font-size:1.5em;
+    font-weight:bold;
+    padding:10px;
+}
+
+#flex-nav ul {
+    display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display:grid;
+}
+    
+header {
+  margin-top:-1.75%;
+}
+
+/*-----------------------Tablet Media Query------------------------*/
+@media only screen and (min-width: 480px)  {
+.container2 { /*for index.html*/
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:.5em;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+.nestedgrid {
+display:grid;
+grid-template-columns:100%;
+grid-template-areas:
+"homeA"
+"figB"
+"homeB"
+"figC"
+"homeC"
+"figD"
+"homeD";
+}
+header {
+  margin-top:-1.25%;
+}
+}
+/*-----------------------Desktop Media Query------------------------*/
+@media only screen and (min-width: 960px)  {
+.container2 { /*for index.html*/
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:.5em;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+.nestedgrid {
+display:grid;
+grid-template-columns:auto auto auto;
+grid-gap:.5em;
+grid-template-areas:
+"homeA homeA homeA"
+"figB figC figD"
+"homeB homeC homeD";
+}
+#navwrapper {
+    display:grid;
+    grid-template-areas:
+    "first second third fourth fifth sixth seventh";
+    }
+
+/* Below will change from hamburger menu to side navigation*/
+  
+#flex-nav ul {
+  display:grid;
+  text-align:left;s
+}
+
+#flex-nav li {
+  padding-left:10px;
+  padding-top:10px;
+}
+.toggleNav {
+  display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+}
+header {
+  margin-top:-.5%;
+}
+  
+}
